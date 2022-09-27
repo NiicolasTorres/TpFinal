@@ -6,5 +6,6 @@ from Articulos.models import Entrada
 class entradas_admin(admin.ModelAdmin):
     list_display=("titulo","autor","fecha")
     search_fields=["titulo"]
+    list_filter=["autor"]
 
 admin.site.register(Entrada,entradas_admin)

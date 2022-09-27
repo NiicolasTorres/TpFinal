@@ -7,7 +7,7 @@ class Entrada(models.Model):
     subtitulo = models.CharField(max_length=50)
     cuerpo = models.TextField(max_length=5000)
     autor = models.CharField(max_length=50)
-    fecha = models.CharField(max_length=50)
+    fecha = models.DateField(max_length=50)
     imagen = models.ImageField(upload_to="articulos", null=True)
 
     def __str__(self):
