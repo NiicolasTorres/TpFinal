@@ -22,6 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.home),
+    path("busqueda_articulos/", views.busqueda_articulos),
+    path("buscar/",views.buscar),
 ]
 
 if settings.DEBUG:

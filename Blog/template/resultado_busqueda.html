@@ -1,0 +1,24 @@
+<html>
+    <body>
+
+        <p>Estas Buscando: <strong>{{querry}}</strong> </p>
+        {% if articulos %}
+
+             <p>Articulos encontrados: {{articulos|length}} Entradas</p>
+
+             <ul>
+                {% for articulo in articulos %}
+
+                <li>
+                    {{articulo.nombre}} &nbsp;{{articulo.titulo}} &nbsp; {{articulo.fecha}}
+
+                </li>
+                {% endfor %}
+             </ul>
+        {% else %}
+             <p>No existe la entrada buscada.</p>
+
+        {% endif %}
+    
+    </body>
+</html>
