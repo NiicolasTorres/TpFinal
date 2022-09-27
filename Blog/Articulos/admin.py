@@ -2,4 +2,9 @@ from django.contrib import admin
 from Articulos.models import Entrada
 
 # Register your models here.
-admin.site.register(Entrada)
+
+class entradas_admin(admin.ModelAdmin):
+    list_display=("titulo","autor","fecha")
+    search_fields=["titulo"]
+
+admin.site.register(Entrada,entradas_admin)
